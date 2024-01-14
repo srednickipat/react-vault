@@ -1,19 +1,18 @@
 import { Box, Button, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const ContentComponent = ({ handleModalOpen }) => {
   return (
     <Box>
       <Typography variant="h6" gutterBottom>
-        Content
+        Simple Page using material components
       </Typography>
-      <p>Hello</p>
 
       <Button variant="contained" color="primary" onClick={handleModalOpen}>
         Open Modal
       </Button>
-
-      <Button variant="contained" color="secondary">
-        Inna zmiana
+      <Button LinkComponent={Link} to={"/"} color="secondary" sx={{ ml: 2 }}>
+        Go Back
       </Button>
     </Box>
   );
