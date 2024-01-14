@@ -1,12 +1,17 @@
+import { Box, Container, CssBaseline, ThemeProvider } from "@mui/material";
 import { Outlet } from "react-router-dom";
+import theme from "../theme";
 
 const MainLayout = () => {
   return (
-    <div style={{ display: "flex", width: "100%" }}>
-      <div style={{ width: "100%" }}>
-        <Outlet />
-      </div>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Container>
+        <Box>
+          <Outlet />
+        </Box>
+      </Container>
+    </ThemeProvider>
   );
 };
 
