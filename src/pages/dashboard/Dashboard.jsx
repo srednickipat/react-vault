@@ -1,6 +1,7 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import MyButton from "../../components/MuButton/MyButton";
 
 function Dashboard() {
   const [count, setCount] = useState(0);
@@ -10,14 +11,14 @@ function Dashboard() {
       <Typography variant="h4">Vite + React App Example</Typography>
 
       <Box>
-        <Button onClick={() => setCount((count) => count + 1)}>
+        <MyButton onClick={() => setCount((count) => count + 1)}>
           count is {count}
-        </Button>
+        </MyButton>
       </Box>
       <Box>
-        <Button LinkComponent={Link} to={"/vault"} color="secondary">
+        <MyButton LinkComponent={Link} to={"/vault"} color="secondary">
           VAULT Page
-        </Button>
+        </MyButton>
       </Box>
     </Box>
   );
