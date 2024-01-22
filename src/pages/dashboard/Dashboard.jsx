@@ -19,7 +19,12 @@ function Dashboard() {
         </MyButton>
       </Grid>
       <Grid item xs={12}>
-        <MyButton LinkComponent={Link} to={"/vault"} color="secondary">
+        <MyButton
+          variant="contained"
+          LinkComponent={Link}
+          to={"/vault"}
+          color="secondary"
+        >
           VAULT Page
         </MyButton>
       </Grid>
