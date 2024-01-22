@@ -1,8 +1,7 @@
-import React from "react";
 import { Button as MuiButton } from "@mui/material";
 import PropTypes from "prop-types";
 
-const MyButton = ({ onClick, color, variant, disabled, children }) => {
+const MyButton = ({ onClick, color, variant, disabled, children, ...rest }) => {
   return (
     <MuiButton
       onClick={onClick}
@@ -10,6 +9,7 @@ const MyButton = ({ onClick, color, variant, disabled, children }) => {
       variant={variant}
       disabled={disabled}
       data-testId={"my-button"}
+      {...rest}
     >
       {children}
     </MuiButton>
@@ -17,7 +17,7 @@ const MyButton = ({ onClick, color, variant, disabled, children }) => {
 };
 
 MyButton.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   color: PropTypes.oneOf(["inherit", "primary", "secondary"]),
   variant: PropTypes.oneOf(["text", "outlined", "contained"]),
   disabled: PropTypes.bool,

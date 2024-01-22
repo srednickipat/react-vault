@@ -1,10 +1,14 @@
-import React from "react";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 
 const MyTypography = ({ variant, color, align, children }) => {
   return (
-    <Typography variant={variant} color={color} align={align}>
+    <Typography
+      variant={variant}
+      color={color}
+      align={align}
+      data-testId="my-typography"
+    >
       {children}
     </Typography>
   );
